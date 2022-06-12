@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<br><br/>
+<h2>Pareto Improvement Algorithm</h2>
+    <div>
+        <h6>This algorithm is used to pareto improve a fractional allocation in order to
+        improve the total algorithms results and complexity.</h6>
+    </div>
+<br><br/>
+<h4>Usage:</h4>
+    <div>
+        <h6>First you will be prompted to enter the number of desired agents and objects</h6>
+    </div>
+    <div>
+        <h6>Afterwards you will need to enter the item allocations for each and every agent and item,
+            please note that each item can be allocated to a total sum of 1.0</h6>
+    </div>
+    <div>
+        <h6>After entering the desired allocation you will need to enter valuation values
+        for each agent and ibjects. In this algorithm valuations can be positive or negative.</h6>
+    </div>
+<br><br/>
+<h4>Links:</h4>
+    <div>
+        <a href="https://arxiv.org/pdf/1909.00740.pdf">
+            Source Research</a>
+    </div>
+    <div>
+        <a href="https://github.com/erelsgl/fairpy">
+            Main Repository</a>
+    </div>
+    <div>
+        <a href="https://github.com/ShmuelLa/fairpy/tree/master/fairpy/items">
+            Forked Repository</a>
+    </div>
+<br><br/>
+<br><br/>
+{% endblock %}

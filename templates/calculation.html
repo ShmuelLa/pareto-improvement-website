@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<br><br/>
+<h3>Input</h3>
+<br><br/>
+    {% for content in us_input %}
+        <h4>{{content}}</h4>
+    {% endfor %}
+<br><br/>
+<h3>Output</h3>
+<br><br/>
+    {% for content in pi_result %}
+        <h4>{{content}}</h4>
+    {% endfor %}
+{% endblock %}

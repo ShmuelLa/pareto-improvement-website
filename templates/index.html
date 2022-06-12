@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+    {% block content %}
+    <form method="POST">
+      <h3
+              align="center"
+              style="padding: 35px">Enter the desired Agents/Objects amount
+      </h3>
+      <div class="form-group">
+        <label for="email">Agents</label>
+        <input
+          type="number"
+          class="form-control"
+          id="agents"
+          name="agents"
+          placeholder="Enter the number of desired agents"
+          min="1"
+          max="10"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Objects">First Name</label>
+        <input
+          type="number"
+          class="form-control"
+          id="objects"
+          name="objects"
+          placeholder="Enter the number of desired objects"
+          min="1"
+          max="10"
+        />
+      </div>
+      <br />
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% endblock %}

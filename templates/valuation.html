@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+    {% block content %}
+    <h3
+                  align="center"
+                  style="padding: 35px">Please enter the desired agents object valuations
+          </h3>
+    <form method="POST">
+        {% for agent in range(agents) %}
+            <label>Agent {{agent+1}}</label>
+            {% for object in range(objects) %}
+                <div class="form-group">
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="ag_input"
+                        name="ag_input"
+                        placeholder="Agent {{agent+1}} object {{object}} valuation between -1000 to 1000"
+                        min="-1000"
+                        max="1000"
+                    />
+                </div>
+                <br><br>
+            {% endfor %}
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+    {% block content %}
+    <h3
+                  align="center"
+                  style="padding: 35px">Please enter the desired object allocations
+          </h3>
+    <form method="POST">
+        {% for agent in range(agents) %}
+            <label>Agent {{agent+1}}</label>
+            {% for object in range(objects) %}
+                <div class="form-group">
+                    <input
+                        type="number"
+                        step="0.01"
+                        class="form-control"
+                        id="ag_input"
+                        name="ag_input"
+                        placeholder="Agent {{agent+1}} object {{object}} allocation between 0.0 to 1.0"
+                        min="0"
+                        max="1"
+                    />
+                </div>
+                <br><br>
+            {% endfor %}
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% endblock %}
